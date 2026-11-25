@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Central Library Membership Form</title>
+</head>
+<body>
+  <h2 align="center">Central Library Membership Form</h2>
+  <p align="center"><i>Fields marked with * are mandatory</i></p>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend><b>Member Information</b></legend>
+      <table>
+        <tr>
+          <td><label for="fullname">Full Name *</label></td>
+          <td><input type="text" id="fullname" name="fullname" placeholder="As in your ID card" size="30" required></td>
+          <td><label for="memberid">Student / Staff ID *</label></td>
+          <td><input type="text" id="memberid" name="member_id" placeholder="e.g. KU-2025-0117" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email *</label></td>
+          <td><input type="email" id="email" name="email" placeholder="name@ku.edu.np" size="30" required></td>
+          <td><label for="mobile">Mobile</label></td>
+          <td><input type="tel" id="mobile" name="mobile" placeholder="98XXXXXXXX"></td>
+        </tr>
+        <tr>
+          <td>Member Type *</td>
+          <td>
+            <input type="radio" id="mt_student" name="member_type" value="student" checked required>
+            <label for="mt_student">Student</label>
+            <input type="radio" id="mt_faculty" name="member_type" value="faculty">
+            <label for="mt_faculty">Faculty</label>
+            <input type="radio" id="mt_staff" name="member_type" value="staff">
+            <label for="mt_staff">Staff</label>
+          </td>
+          <td><label for="school">School</label></td>
+          <td>
+            <select id="school" name="school">
+              <option value="" disabled selected>--Choose School--</option>
+              <option value="science">School of Science</option>
+              <option value="engineering">School of Engineering</option>
+              <option value="management">School of Management</option>
+              <option value="education">School of Education</option>
+              <option value="arts">School of Arts</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend><b>Membership Preferences</b></legend>
+      <table>
+        <tr>
+          <td><label for="startdate">Membership Start Date</label></td>
+          <td><input type="date" id="startdate" name="start_date"></td>
+          <td align="right"><label for="duration">Duration</label></td>
+          <td>
+            <select id="duration" name="duration">
+              <option value="1">1 Year</option>
+              <option value="2">2 Years</option>
+              <option value="3">3 Years</option>
+              <option value="4">4 Years</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Sections of Interest</td>
+          <td colspan="3">
+            <input type="checkbox" id="s_ref" name="sections" value="reference"><label for="s_ref">Reference</label>
+            <input type="checkbox" id="s_per" name="sections" value="periodicals"><label for="s_per">Periodicals</label>
+            <input type="checkbox" id="s_the" name="sections" value="thesis"><label for="s_the">Thesis Archive</label>
+            <input type="checkbox" id="s_elib" name="sections" value="elibrary" checked><label for="s_elib">E-Library</label>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="books">Books you want the library to buy</label></td>
+          <td colspan="3">
+            <textarea id="books" name="books_request" rows="3" cols="55" placeholder="Title, Author, Edition (one per line)"></textarea>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <p>
+      <input type="checkbox" id="agree" name="agree" value="yes" required>
+      <label for="agree">I agree to follow the library rules and return books on time.</label>
+    </p>
+
+    <p align="center">
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear Form">
+    </p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Individual Account Opening &amp; KYC Form</title>
+</head>
+<body>
+  <!-- File upload requires method="post" and enctype="multipart/form-data" -->
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <table border="1" cellpadding="5" cellspacing="0" width="100%">
+
+      <!-- Header + photo -->
+      <tr>
+        <td colspan="4" align="center">
+          <h2>Himalayan Savings Bank Ltd.</h2>
+          <b>Individual Account Opening &amp; KYC Form</b>
+        </td>
+        <td rowspan="5" align="center" valign="middle">
+          Affix recent<br>passport-size<br>photo<br><br>
+          <input type="file" name="photo" accept="image/*" aria-label="Passport-size photo">
+        </td>
+      </tr>
+      <tr>
+        <td><label for="branch">Branch</label></td>
+        <td>
+          <select id="branch" name="branch">
+            <option>Kathmandu Main</option>
+            <option>Lalitpur</option>
+            <option>Bhaktapur</option>
+            <option>Pokhara</option>
+            <option>Biratnagar</option>
+          </select>
+        </td>
+        <td><label for="date">Date</label></td>
+        <td><input type="date" id="date" name="date"></td>
+      </tr>
+      <tr>
+        <td>Account Type</td>
+        <td colspan="3">
+          <input type="radio" id="at1" name="account_type" value="saving" checked><label for="at1">Saving</label>
+          <input type="radio" id="at2" name="account_type" value="current"><label for="at2">Current</label>
+          <input type="radio" id="at3" name="account_type" value="fixed"><label for="at3">Fixed Deposit</label>
+          <input type="radio" id="at4" name="account_type" value="remittance"><label for="at4">Remittance</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Currency</td>
+        <td>
+          <input type="radio" id="c1" name="currency" value="NPR" checked><label for="c1">NPR</label>
+          <input type="radio" id="c2" name="currency" value="USD"><label for="c2">USD</label>
+        </td>
+        <td><label for="deposit">Initial Deposit</label></td>
+        <td><input type="number" id="deposit" name="initial_deposit" min="500" placeholder="Min. 500"></td>
+      </tr>
+      <tr>
+        <td>Customer Type</td>
+        <td colspan="3">
+          <input type="checkbox" id="ct1" name="customer_type" value="salaried"><label for="ct1">Salaried</label>
+          <input type="checkbox" id="ct2" name="customer_type" value="business"><label for="ct2">Business</label>
+          <input type="checkbox" id="ct3" name="customer_type" value="student"><label for="ct3">Student</label>
+          <input type="checkbox" id="ct4" name="customer_type" value="nrn"><label for="ct4">Non-Resident Nepali</label>
+        </td>
+      </tr>
+
+      <!-- A. Personal Information -->
+      <tr><th colspan="5" align="left">A. Personal Information</th></tr>
+      <tr>
+        <td><label for="fname">First Name</label></td>
+        <td><input type="text" id="fname" name="first_name" required></td>
+        <td><label for="mname">Middle Name</label></td>
+        <td colspan="2"><input type="text" id="mname" name="middle_name"></td>
+      </tr>
+      <tr>
+        <td><label for="lname">Last Name</label></td>
+        <td><input type="text" id="lname" name="last_name" required></td>
+        <td><label for="dob">Date of Birth (AD)</label></td>
+        <td colspan="2"><input type="date" id="dob" name="dob" required></td>
+      </tr>
+      <tr>
+        <td><label for="marital">Marital Status</label></td>
+        <td>
+          <select id="marital" name="marital_status">
+            <option>Unmarried</option>
+            <option>Married</option>
+            <option>Divorced</option>
+            <option>Widowed</option>
+          </select>
+        </td>
+        <td><label for="occ">Occupation</label></td>
+        <td colspan="2"><input type="text" id="occ" name="occupation"></td>
+      </tr>
+      <tr>
+        <td><label for="income">Annual Income</label></td>
+        <td colspan="4">
+          <select id="income" name="annual_income">
+            <option>Below 5 Lakh</option>
+            <option>5 - 10 Lakh</option>
+            <option>10 - 25 Lakh</option>
+            <option>Above 25 Lakh</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- B. Address -->
+      <tr><th colspan="5" align="left">B. Address</th></tr>
+      <tr>
+        <th>Type</th><th>Province</th><th>District</th><th>Municipality / Ward</th><th>Tole</th>
+      </tr>
+      <tr>
+        <td>Permanent</td>
+        <td>
+          <select name="perm_province" aria-label="Permanent province">
+            <option>Koshi</option><option>Madhesh</option><option>Bagmati</option>
+            <option>Gandaki</option><option>Lumbini</option><option>Karnali</option><option>Sudurpashchim</option>
+          </select>
+        </td>
+        <td><input type="text" name="perm_district" aria-label="Permanent district"></td>
+        <td><input type="text" name="perm_municipality" aria-label="Permanent municipality / ward"></td>
+        <td><input type="text" name="perm_tole" aria-label="Permanent tole"></td>
+      </tr>
+      <tr>
+        <td>Temporary</td>
+        <td>
+          <select name="temp_province" aria-label="Temporary province">
+            <option>Koshi</option><option>Madhesh</option><option>Bagmati</option>
+            <option>Gandaki</option><option>Lumbini</option><option>Karnali</option><option>Sudurpashchim</option>
+          </select>
+        </td>
+        <td><input type="text" name="temp_district" aria-label="Temporary district"></td>
+        <td><input type="text" name="temp_municipality" aria-label="Temporary municipality / ward"></td>
+        <td><input type="text" name="temp_tole" aria-label="Temporary tole"></td>
+      </tr>
+
+      <!-- C. Nominee Details -->
+      <tr><th colspan="5" align="left">C. Nominee Details</th></tr>
+      <tr>
+        <th>S.N.</th><th>Nominee Name</th><th>Relation</th><th>Share (%)</th><th>Citizenship No.</th>
+      </tr>
+      <tr>
+        <td align="center">1</td>
+        <td><input type="text" name="nominee1_name" aria-label="Nominee 1 name"></td>
+        <td>
+          <select name="nominee1_relation" aria-label="Nominee 1 relation">
+            <option>Father</option><option>Mother</option><option>Spouse</option>
+            <option>Son</option><option>Daughter</option><option>Sibling</option>
+          </select>
+        </td>
+        <td><input type="number" name="nominee1_share" min="0" max="100" size="5" aria-label="Nominee 1 share"></td>
+        <td><input type="text" name="nominee1_citizenship" aria-label="Nominee 1 citizenship number"></td>
+      </tr>
+      <tr>
+        <td align="center">2</td>
+        <td><input type="text" name="nominee2_name" aria-label="Nominee 2 name"></td>
+        <td>
+          <select name="nominee2_relation" aria-label="Nominee 2 relation">
+            <option>Father</option><option>Mother</option><option>Spouse</option>
+            <option>Son</option><option>Daughter</option><option>Sibling</option>
+          </select>
+        </td>
+        <td><input type="number" name="nominee2_share" min="0" max="100" size="5" aria-label="Nominee 2 share"></td>
+        <td><input type="text" name="nominee2_citizenship" aria-label="Nominee 2 citizenship number"></td>
+      </tr>
+
+      <!-- D. Services & Documents -->
+      <tr><th colspan="5" align="left">D. Services &amp; Documents</th></tr>
+      <tr>
+        <td>Services Required</td>
+        <td colspan="4">
+          <input type="checkbox" id="sv1" name="services" value="debit_card"><label for="sv1">Debit Card</label>
+          <input type="checkbox" id="sv2" name="services" value="mobile_banking" checked><label for="sv2">Mobile Banking</label>
+          <input type="checkbox" id="sv3" name="services" value="internet_banking"><label for="sv3">Internet Banking</label>
+          <input type="checkbox" id="sv4" name="services" value="cheque_book"><label for="sv4">Cheque Book</label>
+          <input type="checkbox" id="sv5" name="services" value="sms_alert"><label for="sv5">SMS Alert</label>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">Upload Documents</td>
+        <td>Citizenship (front &amp; back)</td>
+        <td colspan="3"><input type="file" name="citizenship_docs" multiple aria-label="Citizenship front and back"></td>
+      </tr>
+      <tr>
+        <td>Specimen Signature</td>
+        <td colspan="3"><input type="file" name="signature" aria-label="Specimen signature"></td>
+      </tr>
+
+      <!-- Declaration -->
+      <tr>
+        <td colspan="5">
+          <input type="checkbox" id="decl" name="declaration" value="yes" required>
+          <label for="decl">I declare that the information above is true and I accept the bank's terms and conditions.</label>
+        </td>
+      </tr>
+
+      <!-- Buttons -->
+      <tr>
+        <td colspan="5" align="center">
+          <input type="submit" value="Submit Application">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+
+  </form>
+</body>
+</html>
